@@ -1,5 +1,10 @@
 #!/bin/bash 
 EMAIL='Mark.southworth98@gmail.com'
+dir=/tmp/hourly-healthchecks
+
+if [[ ! -d $dir ]]; then
+  mkdir /tmp/hourly-healthchecks
+fi
 
 function sysstat {
 echo -e "
